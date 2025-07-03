@@ -15,4 +15,10 @@ public class TestTuplesWithSameProduct extends TestCase {
         TuplesWithSameProduct tp = new TuplesWithSameProduct();
         assertEquals(16, tp.tupleSameProduct(nums));
     }
+
+    public void testSpec3 () {
+        int [] nums = {1,2,4,5,10,20};
+        TuplesWithSameProduct tp = new TuplesWithSameProduct();
+        assertEquals(40, tp.tupleSameProduct(nums));
+    }
 }
