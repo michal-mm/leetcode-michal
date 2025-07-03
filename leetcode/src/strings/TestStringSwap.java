@@ -1,10 +1,12 @@
 package strings;
 
+import junit.framework.TestCase;
+
 public class TestStringSwap extends TestCase {
 
     public void testSpec1 () {
         StringSwap sw = new StringSwap();
-        assertEquals(true, sw.areAlmostEqual("bank", "knab"));
+        assertEquals(true, sw.areAlmostEqual("bank", "kanb"));
     }
 
     public void testSpec2 () {
