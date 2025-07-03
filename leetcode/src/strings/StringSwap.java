@@ -13,8 +13,20 @@ public class StringSwap {
          * - check if strings arent't the same
          * - for each cahr position check if you can swap two characters
          */
-            
 
+        
+        // return s1.equals(s2) || 
+        //     IntStream.range(0, s1.length()-1)
+        //             .anyMatch(i -> IntStream.range(i+1, s1.length())
+        //                         .anyMatch(j -> canBeFlipped(s1, s2, i, j)));
+        
+        return s1.equals(s2) || IntStream.range(0, s1.length()-1)
+            .boxed()
+            .flatMap(i-> IntStream.range(i+1, s1.length())
+                    .mapToObj(j-> new int[] {i,j}))
+            .anyMatch(pair -> canBeFlipped(s1, s2, pair[0], pair[1]));
+            
+        /*
         if (s1.equals(s2))
             return true;
 
@@ -26,6 +38,7 @@ public class StringSwap {
         }
 
         return false;
+        */
     }
 
     private boolean canBeFlipped (String s1, String s2, int idx1, int idx2) {
