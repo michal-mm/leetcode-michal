@@ -25,12 +25,5 @@ public class TwoSum {
                 .mapToObj(j -> new int [] {i,j}))
             .findFirst()
             .get();
-
-       
-
-        // return pairsOfIndices.stream()
-        //     .filter(pair -> nums[pair[0]]+nums[pair[1]] == target)
-        //     .findFirst()
-        //     .get();
     }
 }
