@@ -24,7 +24,6 @@ public class LinkedNumbers {
 		
 		int add = 0;
 		int idx=0;
-		int min = Math.min(list1.size(), list2.size());
 		int max = Math.max(list1.size(), list2.size());
 		
 		while (idx < max || add > 0) {
@@ -42,7 +41,7 @@ public class LinkedNumbers {
 			idx += 1;
 		}
 		
-		System.out.println(result);
+//		System.out.println(result);
 		
 		return result;
 	}
