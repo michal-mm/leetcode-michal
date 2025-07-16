@@ -26,7 +26,8 @@ public class LinkedNumbers {
 		int idx=0;
 		int max = Math.max(list1.size(), list2.size());
 		
-		while (idx < max || add > 0) {
+//		while (idx < max || add > 0) {
+		for (idx=0; idx<max || add>0; idx++) {
 			int sum = add;
 			if (idx < list1.size()) {
 				sum += list1.get(idx);
@@ -38,7 +39,7 @@ public class LinkedNumbers {
 			int elemToAdd = sum % 10;
 			result.add(elemToAdd);
 			add = sum / 10;
-			idx += 1;
+//			idx += 1;
 		}
 		
 //		System.out.println(result);
