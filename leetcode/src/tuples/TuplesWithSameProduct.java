@@ -1,9 +1,5 @@
 package tuples;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -12,7 +8,7 @@ public class TuplesWithSameProduct {
 
 
     public int tupleSameProduct (int [] nums) {
-        int result = 0 ;
+        // int result = 0 ;
 
         /* 
          * input example: 2,3,4,6
