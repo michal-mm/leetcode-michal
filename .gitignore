@@ -416,3 +416,12 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+#my specific files&folders
+Leetcode-michal-ide/
+leetcode/.classpath
+leetcode/.gitignore
+leetcode/.project
+leetcode/.settings/
+lib/
+
