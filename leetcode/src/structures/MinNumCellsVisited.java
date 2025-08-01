@@ -35,8 +35,8 @@ public class MinNumCellsVisited {
 		// first cell is always visited
 		dist[i][j] = 1;
 		
-		while ( !(xStack.isEmpty() && yStack.isEmpty()) ) { //|| 
-				// (i==rows-1 && j==cols-1) ){
+		while ( !(xStack.isEmpty() && yStack.isEmpty())  || 
+				 (i==rows-1 && j==cols-1) ){
 			System.out.print(("\n\nX-queue: "));
 			xStack.forEach(elem -> 
 						System.out.print("[" + elem[0] + "," + elem[1] + "], "));
