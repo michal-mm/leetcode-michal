@@ -23,7 +23,6 @@ public class MaxBinTreeTest  extends TestCase {
 	public  void testSpec2 () {
 		TreeNodeMWBT root = new TreeNodeMWBT(1);
 		TreeNodeMWBT left = new TreeNodeMWBT(6);
-		TreeNodeMWBT right;
 		TreeNodeMWBT parent = new TreeNodeMWBT(5, left, null);
 		root.left = new TreeNodeMWBT(3, parent, null);
 		root.right = new TreeNodeMWBT(2, null, new TreeNodeMWBT(9, new TreeNodeMWBT(7), null));

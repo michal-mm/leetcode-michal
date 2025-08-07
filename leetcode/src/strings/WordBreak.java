@@ -50,6 +50,7 @@ public class WordBreak {
 	 * @param dict
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private List<String> wordBreakHelper(String s, List<String> dict) {
 		List<String> result = new ArrayList<>();
 

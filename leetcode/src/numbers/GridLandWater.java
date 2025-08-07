@@ -43,7 +43,7 @@ public class GridLandWater {
 	public int maxDistance (int [][]grid) {
 		int result = -1;
 		
-		List<int[]> land = new ArrayList();
+		List<int[]> land = new ArrayList<>();
 		
 		for (int i=0; i<grid.length; i++) {
 			for (int j=0; j<grid.length; j++) {

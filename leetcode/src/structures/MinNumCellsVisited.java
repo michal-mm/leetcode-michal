@@ -2,10 +2,8 @@ package structures;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
 import java.util.Stack;
 
 public class MinNumCellsVisited {
@@ -103,6 +101,7 @@ public class MinNumCellsVisited {
 		return null;
 	}
 	
+	@SuppressWarnings("unlikely-arg-type")
 	public int minimumVisitedCelsWithGraph (int [][] grid) {
 		/*
 		 * start with building a graph, where each node is grid[i][j]
@@ -139,7 +138,6 @@ public class MinNumCellsVisited {
 					
 				}
 				
-				List<Node> tmpYnodes = new ArrayList<Node>();
 				for (int k=i+1; k<Math.min(grid.length, grid[i][j]+1+1); k++) {
 					tmpXnodes.add(new Node(grid[k][j], k, j));
 				}
@@ -173,8 +171,6 @@ public class MinNumCellsVisited {
 		
 		List<Node> xList;
 		List<Node> yList;
-		List<Node> adjacentNodes;
-		
 		private Node (int nodeVal, int x, int y) {
 			this.nodeVal = nodeVal;
 			this.x = x;
