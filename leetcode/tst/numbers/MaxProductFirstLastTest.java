@@ -15,7 +15,6 @@ public class MaxProductFirstLastTest {
 		MaxProductFirstLast mpfl = new MaxProductFirstLast();
 		
 		assertEquals(expected, mpfl.maximumProduct(nums, m));
-		assertEquals(expected, mpfl.maxClaudeP(nums, m));
 	}
 	
 	@Test
@@ -27,7 +26,6 @@ public class MaxProductFirstLastTest {
 		MaxProductFirstLast mpfl = new MaxProductFirstLast();
 		
 		assertEquals(expected, mpfl.maximumProduct(nums, m));
-		assertEquals(expected, mpfl.maxClaudeP(nums, m));
 	}
 	
 	@Test
@@ -39,7 +37,6 @@ public class MaxProductFirstLastTest {
 		MaxProductFirstLast mpfl = new MaxProductFirstLast();
 		
 		assertEquals(expected, mpfl.maximumProduct(nums, m));
-		assertEquals(expected, mpfl.maxClaudeP(nums, m));
 	}
 	
 	@Test
@@ -51,6 +48,5 @@ public class MaxProductFirstLastTest {
 		MaxProductFirstLast mpfl = new MaxProductFirstLast();
 		
 		assertEquals(expected, mpfl.maximumProduct(nums, m));
-		assertEquals(expected, mpfl.maxClaudeP(nums, m));
 	}
 }
