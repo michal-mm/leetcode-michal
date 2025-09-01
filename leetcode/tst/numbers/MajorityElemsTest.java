@@ -16,10 +16,13 @@ public class MajorityElemsTest {
 		
 		MajorityElems me = new MajorityElems();
 		List<Integer> result = me.majorityElement(nums);
+		List<Integer> resultBoyerMoore = me.majorityElementWithBoyerMoore(nums);
 		
 		assertEquals(expected.size(), result.size());
+		assertEquals(expected.size(), resultBoyerMoore.size());
 		for(int expectedElem: expected) {
 			assertTrue(result.contains(expectedElem));
+			assertTrue(resultBoyerMoore.contains(expectedElem));
 		}
 	}
 	
@@ -30,10 +33,13 @@ public class MajorityElemsTest {
 		
 		MajorityElems me = new MajorityElems();
 		List<Integer> result = me.majorityElement(nums);
+		List<Integer> resultBoyerMoore = me.majorityElementWithBoyerMoore(nums);
 		
 		assertEquals(expected.size(), result.size());
+		assertEquals(expected.size(), resultBoyerMoore.size());
 		for(int expectedElem: expected) {
 			assertTrue(result.contains(expectedElem));
+			assertTrue(resultBoyerMoore.contains(expectedElem));
 		}
 	}
 	
@@ -44,10 +50,13 @@ public class MajorityElemsTest {
 		
 		MajorityElems me = new MajorityElems();
 		List<Integer> result = me.majorityElement(nums);
+		List<Integer> resultBoyerMoore = me.majorityElementWithBoyerMoore(nums);
 		
 		assertEquals(expected.size(), result.size());
+		assertEquals(expected.size(), resultBoyerMoore.size());
 		for(int expectedElem: expected) {
 			assertTrue(result.contains(expectedElem));
+			assertTrue(resultBoyerMoore.contains(expectedElem));
 		}
 	}
 }
