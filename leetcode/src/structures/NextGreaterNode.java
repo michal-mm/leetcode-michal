@@ -28,7 +28,7 @@ public class NextGreaterNode {
 		// if the next elem is greater than current then current one has next biggest
 		// else we have to wait and check further elems (keep tracking these elems
 		
-		Stack<Integer> pendingItems = new Stack();
+		Stack<Integer> pendingItems = new Stack<>();
 		
 		for (int i=0; i<N; i++) {
 			// check items in the stack against current item

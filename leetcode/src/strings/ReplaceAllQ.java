@@ -1,10 +1,7 @@
 package strings;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class ReplaceAllQ {
 

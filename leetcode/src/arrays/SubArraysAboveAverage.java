@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.stream.IntStream;
-
 public class SubArraysAboveAverage {
 
 	/**

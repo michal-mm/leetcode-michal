@@ -1,10 +1,5 @@
 package structures;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.junit.runners.ParentRunner;
-
 public class CyclesIn2DGrid {
 
 	private final int[][] directions = { {-1,0}, {1,0}, {0,-1}, {0,1} };
