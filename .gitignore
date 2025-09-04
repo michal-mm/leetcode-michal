@@ -424,4 +424,5 @@ leetcode/.gitignore
 leetcode/.project
 leetcode/.settings/
 lib/
-
+.idea/
+leetcode/.idea/
