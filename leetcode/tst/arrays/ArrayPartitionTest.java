@@ -1,9 +1,12 @@
 package arrays;
 
+import org.junit.Test;
+
 import junit.framework.TestCase;
 
 public class ArrayPartitionTest extends TestCase {
 
+	@Test
 	public void testSpec1 () {
 		ArrayPartition ap = new ArrayPartition();
 		int[] arr = {1,15,7,9,2,5,10}; 
@@ -13,6 +16,7 @@ public class ArrayPartitionTest extends TestCase {
 		assertEquals(expected, ap.maxSumAfterPartitioning(arr, k));
 	}
 	
+	@Test
 	public void testSpec2 () {
 		ArrayPartition ap = new ArrayPartition();
 		int[] arr = {1,4,1,5,7,3,6,1,9,9,3}; 
@@ -22,6 +26,7 @@ public class ArrayPartitionTest extends TestCase {
 		assertEquals(expected, ap.maxSumAfterPartitioning(arr, k));
 	}
 	
+	@Test
 	public void testSpec3 () {
 		ArrayPartition ap = new ArrayPartition();
 		int[] arr = {1}; 
