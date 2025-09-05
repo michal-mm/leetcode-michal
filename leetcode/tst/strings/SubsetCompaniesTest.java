@@ -4,10 +4,13 @@ import static org.junit.Assert.assertArrayEquals;
 
 import java.util.List;
 
+import org.junit.Test;
+
 import junit.framework.TestCase;
 
 public class SubsetCompaniesTest extends TestCase {
 
+	@Test
 	public void testSpec1() {
 		SubsetCompanies sc = new SubsetCompanies();
 		int [] expected = {0,1,4};
@@ -22,6 +25,7 @@ public class SubsetCompaniesTest extends TestCase {
 		assertArrayEquals(expected, sc.peopleIndexes(favouriteCompanies));
 	}
 	
+	@Test
 	public void testSpec2() {
 		SubsetCompanies sc = new SubsetCompanies();
 		int [] expected = {0,1};
@@ -35,6 +39,7 @@ public class SubsetCompaniesTest extends TestCase {
 		assertArrayEquals(expected, sc.peopleIndexes(favouriteCompanies));
 	}
 	
+	@Test
 	public void testSpec3() {
 		SubsetCompanies sc = new SubsetCompanies();
 		int [] expected = {0,1,2,3};
