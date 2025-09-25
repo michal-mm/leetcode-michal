@@ -29,10 +29,9 @@ public class MaxNonNegativeProduct {
     public int maxProductPath(int[][] grid) {
         int rows = grid.length;
         int cols = grid[0].length;
-        int[][]max = new int[rows][cols];
-        int[][] min = new int[rows][cols];
-        int modulo = (int) (10e9+7);
-//        Arrays.fill(max, Integer.MIN_VALUE);
+        long[][]max = new long[rows][cols];
+        long[][] min = new long[rows][cols];
+        int modulo = (int) (1e9)+7;
 
         // init firs row and column
         max[0][0] = grid[0][0];
@@ -63,6 +62,6 @@ public class MaxNonNegativeProduct {
             }
         }
 
-        return max[rows-1][cols-1] >=0 ? max[rows-1][cols-1]%modulo : -1;
+        return max[rows-1][cols-1] >=0 ? (int) (max[rows-1][cols-1]%modulo) : -1;
     }
 }
