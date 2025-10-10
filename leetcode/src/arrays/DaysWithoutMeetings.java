@@ -1,6 +1,7 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class DaysWithoutMeetings {
 
@@ -27,6 +28,27 @@ public class DaysWithoutMeetings {
      * @return - number of days without meetings
      */
     public int countDays(int days, int[][] meetings) {
+        int daysWithoutMeetings = 0;
+        int end = 0;
+
+        Arrays.sort(meetings, Comparator.comparingInt(item -> item[0]));
+
+        for (int[] aMeeting : meetings) {
+            if (aMeeting[0] > end) {
+                daysWithoutMeetings += aMeeting[0]-end-1;
+            }
+            end = Math.max(end, aMeeting[1]);
+        }
+
+        if (days > end) {
+            daysWithoutMeetings += days-end;
+        }
+
+        return daysWithoutMeetings;
+    }
+
+
+    public int countDaysBruteForce(int days, int[][] meetings) {
         int [] booked = new int[days];
 
         for (int [] meeting : meetings) {
