@@ -25,17 +25,27 @@ public class MinOpersToMoveAllBalls {
     public int[] minOperations(String boxes) {
         int [] result = new int[boxes.length()];
 
-        char[] chars = boxes.toCharArray();
+        int currentTotalNumOfBalls = 0;
+        int currentMinOpers = 0;
 
-        // iterate each index
+        // left->right iteration
         for (int i=0; i<boxes.length(); i++) {
-            for (int j=0; j<boxes.length(); j++) {
-                if (i == j) continue;
-
-                if (chars[j] == '1') {
-                    result[i] += Math.abs(i - j);
-                }
+            result[i] = currentMinOpers;
+            if (boxes.charAt(i) == '1') {
+                currentTotalNumOfBalls++;
             }
+            currentMinOpers += currentTotalNumOfBalls;
+        }
+
+        // right->left iteration
+        currentTotalNumOfBalls = 0;
+        currentMinOpers = 0;
+        for (int i=boxes.length()-1; i>=0; i--) {
+            result[i] += currentMinOpers;
+            if (boxes.charAt(i) == '1') {
+                currentTotalNumOfBalls++;
+            }
+            currentMinOpers += currentTotalNumOfBalls;
         }
 
         return result;
