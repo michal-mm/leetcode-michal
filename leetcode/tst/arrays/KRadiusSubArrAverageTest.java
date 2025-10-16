@@ -15,6 +15,7 @@ public class KRadiusSubArrAverageTest {
         KRadiusSubArrAverage kr = new KRadiusSubArrAverage();
 
         assertArrayEquals(expected, kr.getAverages(nums, k));
+        assertArrayEquals(expected, kr.getAveragesWithStreams(nums, k));
     }
 
     @Test
@@ -26,6 +27,7 @@ public class KRadiusSubArrAverageTest {
         KRadiusSubArrAverage kr = new KRadiusSubArrAverage();
 
         assertArrayEquals(expected, kr.getAverages(nums, k));
+        assertArrayEquals(expected, kr.getAveragesWithStreams(nums, k));
     }
 
     @Test
@@ -37,5 +39,6 @@ public class KRadiusSubArrAverageTest {
         KRadiusSubArrAverage kr = new KRadiusSubArrAverage();
 
         assertArrayEquals(expected, kr.getAverages(nums, k));
+        assertArrayEquals(expected, kr.getAveragesWithStreams(nums, k));
     }
 }

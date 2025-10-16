@@ -1,6 +1,9 @@
 package arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Gatherers;
 
 public class KRadiusSubArrAverage {
 
@@ -62,5 +65,43 @@ public class KRadiusSubArrAverage {
         }
 
         return averages;
+    }
+
+    public int[] getAveragesWithStreams(int[] nums, int k) {
+        int n = nums.length;
+        int[] noOp = new int[n];
+        Arrays.fill(noOp, -1);
+
+        if (2*k+1 > n) {
+            return noOp;
+        }
+
+        Integer[] prefix = new Integer[k];
+        Integer[] suffix = new Integer[k];
+
+        List<Integer> list = new ArrayList<>(n);
+
+        Arrays.fill(prefix, -1);
+        Arrays.fill(suffix, -1);
+
+
+        list.addAll(Arrays.asList(prefix));
+        List<Integer> inner = Arrays.stream(nums)
+                .boxed()
+                .gather(Gatherers.windowSliding(2*k+1))
+                .map(iList -> {
+                    if (iList.size() >=  (2*k+1)) {
+                        return (int) iList.stream().mapToLong(i->i).sum() / (2*k+1);
+                    } else {
+                        return -1;
+                    }
+                })
+                .toList();
+
+        list.addAll(inner);
+
+        list.addAll(Arrays.asList(suffix));
+
+        return list.stream().mapToInt(i->i).toArray();
     }
 }
