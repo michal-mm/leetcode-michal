@@ -2,7 +2,6 @@ package strings;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class NumOfSpecialCharacters {
@@ -30,7 +29,7 @@ public class NumOfSpecialCharacters {
         boolean[] foundUpper = new boolean[26];
         boolean[] results = new boolean[26];
 
-        AtomicInteger result = new AtomicInteger(0);
+        int result = 0;
 
         int bound = word.length();
         for (int i = 0; i < bound; i++) {
@@ -41,10 +40,10 @@ public class NumOfSpecialCharacters {
                     foundUpper[Character.toUpperCase(c) - 'A'] &&
                     !results[Character.toLowerCase(c) - 'a']) {
                 results[Character.toLowerCase(c) - 'a'] = true;
-                result.incrementAndGet();
+                result++;
             }
         }
 
-        return result.get();
+        return result;
     }
 }
