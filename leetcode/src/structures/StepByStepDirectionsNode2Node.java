@@ -3,39 +3,44 @@ package structures;
 public class StepByStepDirectionsNode2Node {
 
     public String getDirections(TreeNode root, int startValue, int destValue) {
-        var pathToStart = pathTo(root, startValue, "");
-        var pathToEnd = pathTo(root, destValue, "");
+        var pathToStart = new StringBuilder();
+        pathTo(root, startValue, pathToStart);
+        var startStr = pathToStart.reverse().toString();
+        var pathToEnd = new StringBuilder();
+        pathTo(root, destValue, pathToEnd);
+        var endStr = pathToEnd.reverse().toString();
 
         // if paths have common prefix remove it to make either start or end the root
         int idx = 0;
-        while (idx < pathToStart.length() && idx < pathToEnd.length()) {
-            if (pathToStart.charAt(idx) != pathToEnd.charAt(idx)) {
+        while (idx < startStr.length() && idx < endStr.length()) {
+            if (startStr.charAt(idx) != endStr.charAt(idx)) {
                 break;
             }
             idx++;
         }
 
-        pathToStart = pathToStart.substring(idx);
-        pathToEnd = pathToEnd.substring(idx);
+        startStr = startStr.substring(idx);
+        endStr = endStr.substring(idx);
 
-        return "U".repeat(pathToStart.length()) + pathToEnd;
+        return "U".repeat(startStr.length()) + endStr;
     }
 
-    private String pathTo(TreeNode root, int val, String path) {
+    private boolean pathTo(TreeNode root, int val, StringBuilder path) {
         if (root == null) {
-            return null;
+            return false;
         }
 
         if (root.val == val) {
-            return path;
+            return true;
         }
 
 
-        var left = pathTo(root.left, val, path+"L");
-        if (left == null) {
-            return pathTo(root.right, val, path+"R");
-        } else {
-            return left;
+        if (pathTo(root.left, val, path)) {
+            path.append("L");
+        } else if (pathTo(root.right, val, path)) {
+            path.append("R");
         }
+
+        return !path.isEmpty();
     }
 }
