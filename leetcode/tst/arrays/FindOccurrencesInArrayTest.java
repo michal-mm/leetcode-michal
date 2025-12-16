@@ -16,8 +16,10 @@ public class FindOccurrencesInArrayTest {
 
         FindOccurrencesInArray foia = new FindOccurrencesInArray();
         var result = foia.getOccurrences(nums, queries, x);
+        var resultNoStreamApi = foia.getOccurrencesNoStreamApi(nums, queries, x);
 
         assertArrayEquals(expected, result);
+        assertArrayEquals(expected, resultNoStreamApi);
     }
 
     @Test
@@ -30,7 +32,9 @@ public class FindOccurrencesInArrayTest {
 
         FindOccurrencesInArray foia = new FindOccurrencesInArray();
         var result = foia.getOccurrences(nums, queries, x);
+        var resultNoStreamApi = foia.getOccurrencesNoStreamApi(nums, queries, x);
 
         assertArrayEquals(expected, result);
+        assertArrayEquals(expected, resultNoStreamApi);
     }
 }

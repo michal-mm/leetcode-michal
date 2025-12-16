@@ -18,4 +18,20 @@ public class FindOccurrencesInArray {
                         indices.get(ith-1) : -1)
                 .toArray();
     }
+
+    public int [] getOccurrencesNoStreamApi(int[] nums, int[] queries, int x) {
+        List<Integer> indices = new ArrayList<>();
+        for (int i=0; i< nums.length; i++) {
+            if (nums[i] == x) {
+                indices.add(i);
+            }
+        }
+
+        int[] result = new int[queries.length];
+        for (int i=0; i<queries.length; i++) {
+            result[i] = queries[i]<=indices.size() ? indices.get(queries[i]-1) : -1;
+        }
+
+        return result;
+    }
 }
