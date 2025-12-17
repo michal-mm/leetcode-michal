@@ -1,10 +1,11 @@
 package arrays;
 
-import org.junit.Test;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
-public class ArrayPartitionTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class ArrayPartitionTest  {
 
 	@Test
 	public void testSpec1 () {

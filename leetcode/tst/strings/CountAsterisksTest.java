@@ -1,9 +1,12 @@
 package strings;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
-public class CountAsterisksTest extends TestCase {
-	
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CountAsterisksTest {
+
+	@Test
 	public void testSpec1 () {
 		CountAsterisks ca = new CountAsterisks();
 		String input = "l|*e*et|c**o|*de|";
@@ -12,6 +15,7 @@ public class CountAsterisksTest extends TestCase {
 		assertEquals(expected, ca.countAsterisks(input));
 	}
 
+	@Test
 	public void testSpec2 () {
 		CountAsterisks ca = new CountAsterisks();
 		String input = "iamprogrammer";
@@ -19,7 +23,8 @@ public class CountAsterisksTest extends TestCase {
 		
 		assertEquals(expected, ca.countAsterisks(input));
 	}
-	
+
+	@Test
 	public void testSpec3 () {
 		CountAsterisks ca = new CountAsterisks();
 		String input = "yo|uar|e**|b|e***au|tifu|l";

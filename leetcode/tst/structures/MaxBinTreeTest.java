@@ -1,9 +1,13 @@
 package structures;
 
-import junit.framework.TestCase;
 
-public class MaxBinTreeTest  extends TestCase {
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class MaxBinTreeTest   {
+
+	@Test
 	public  void testSpec1 () {
 		TreeNodeMWBT root = new TreeNodeMWBT(1);
 		TreeNodeMWBT left = new TreeNodeMWBT(5);
@@ -19,7 +23,8 @@ public class MaxBinTreeTest  extends TestCase {
 		
 		assertEquals(expected, mbt.widthOfBinaryTree(root));
 	}
-	
+
+	@Test
 	public  void testSpec2 () {
 		TreeNodeMWBT root = new TreeNodeMWBT(1);
 		TreeNodeMWBT left = new TreeNodeMWBT(6);
@@ -33,7 +38,8 @@ public class MaxBinTreeTest  extends TestCase {
 		
 		assertEquals(expected, mbt.widthOfBinaryTree(root));
 	}
-	
+
+	@Test
 	public  void testSpec3 () {
 		TreeNodeMWBT root = new TreeNodeMWBT(1,
 				new TreeNodeMWBT(3, new TreeNodeMWBT(5), null),

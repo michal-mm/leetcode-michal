@@ -1,21 +1,27 @@
 package strings;
 
-import junit.framework.TestCase;
 
-public class TestStringSwap extends TestCase {
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TestStringSwap {
+
+    @Test
     public void testSpec1 () {
         StringSwap sw = new StringSwap();
-        assertEquals(true, sw.areAlmostEqual("bank", "kanb"));
+        assertTrue(sw.areAlmostEqual("bank", "kanb"));
     }
 
+    @Test
     public void testSpec2 () {
         StringSwap sw = new StringSwap();
-        assertEquals(false, sw.areAlmostEqual("attac", "defend"));
+        assertFalse(sw.areAlmostEqual("attac", "defend"));
     }
 
+    @Test
     public void testSpec3 () {
         StringSwap sw = new StringSwap();
-        assertEquals(true, sw.areAlmostEqual("kelb", "kelb"));
+        assertTrue(sw.areAlmostEqual("kelb", "kelb"));
     }
 }

@@ -1,13 +1,14 @@
 package arrays;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RandomPointNonOverlapingRectanlgesTest {
 
@@ -37,9 +38,11 @@ public class RandomPointNonOverlapingRectanlgesTest {
 
         RandomPointNonOverlapingRectangles rp = new RandomPointNonOverlapingRectangles(input);
         var output = IntStream.range(0, 5)
+                .boxed()
+                .mapToInt(Integer::intValue)
                 .mapToObj(_ -> rp.pick())
                 .toList();
 
-        assertEquals(true, listOfAllPoints.contains(output.getFirst()));
+        assertTrue(listOfAllPoints.contains(output.getFirst()));
     }
 }

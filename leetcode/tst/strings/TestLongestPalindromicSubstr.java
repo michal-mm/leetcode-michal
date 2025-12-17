@@ -1,9 +1,13 @@
 package strings;
 
-import junit.framework.TestCase;
 
-public class TestLongestPalindromicSubstr extends TestCase {
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class TestLongestPalindromicSubstr  {
+
+    @Test
     public void testSpec1 () {
         String input = "babad";
         String output = "bab";
@@ -12,6 +16,7 @@ public class TestLongestPalindromicSubstr extends TestCase {
         assertEquals(output, lps.longestPalindromicSubstring(input));
     }
 
+    @Test
     public void testSpec2 () {
         String input = "cbbd";
         String output = "bb";
@@ -20,6 +25,7 @@ public class TestLongestPalindromicSubstr extends TestCase {
         assertEquals(output, lps.longestPalindromicSubstring(input));
     }
 
+    @Test
      public void testSpec3 () {
         String input = "abcd";
         String output = "a";

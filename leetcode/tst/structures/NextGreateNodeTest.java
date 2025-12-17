@@ -1,9 +1,13 @@
 package structures;
 
-import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class NextGreateNodeTest {
 
+	@Test
 	public void testSpec1() {
 		/*
 		 * Input: head = [2,1,5]
@@ -19,7 +23,8 @@ public class NextGreateNodeTest {
 		
 		assertArrayEquals(output, ngn.nextLargerNodes(ln0));
 	}
-	
+
+	@Test
 	public void testSpec2() {
 		/*
 		 * Input: head = [2,7,4,3,5]

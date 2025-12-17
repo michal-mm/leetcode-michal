@@ -1,11 +1,15 @@
 package strings;
 
-import junit.framework.TestCase;
 
-public class LongestSubstringTest extends TestCase {
+import org.junit.jupiter.api.Test;
 
-	private LongestSubstring longestSbstr = new LongestSubstring();
-	
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class LongestSubstringTest  {
+
+	private final LongestSubstring longestSbstr = new LongestSubstring();
+
+	@Test
 	public void testSpec1 () {
 		String input = "abcabcbb";
 		int output = 3;
@@ -13,7 +17,8 @@ public class LongestSubstringTest extends TestCase {
 		assertEquals(output, longestSbstr.longestSubstring(input));
 		assertEquals(output, longestSbstr.prettyLongestSubstring(input));
 	}
-	
+
+	@Test
 	public void testSpec2 () {
 		String input = "bbbbb";
 		int output = 1;
@@ -21,7 +26,8 @@ public class LongestSubstringTest extends TestCase {
 		assertEquals(output, longestSbstr.longestSubstring(input));
 		assertEquals(output, longestSbstr.prettyLongestSubstring(input));
 	}
-	
+
+	@Test
 	public void testSpec3 () {
 		String input = "pwwkew";
 		int output = 3;

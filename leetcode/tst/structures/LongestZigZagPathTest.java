@@ -1,10 +1,11 @@
 package structures;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LongestZigZagPathTest {
 
@@ -16,7 +17,7 @@ public class LongestZigZagPathTest {
 
         TreeNode root = new TreeNode(vals[0]);
         TreeNode left, right;
-        LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+        LinkedList<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         for (int i=1; i<vals.length; i++) {

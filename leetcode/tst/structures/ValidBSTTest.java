@@ -1,9 +1,13 @@
 package structures;
 
-import junit.framework.TestCase;
 
-public class ValidBSTTest extends TestCase {
-	
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class ValidBSTTest {
+
+	@Test
 	public void testTreConstr() {
 		Integer [] vals = {5,1,4,null, null,3,6};
 		TreeNode t =TreeNode.of(vals);
@@ -15,23 +19,25 @@ public class ValidBSTTest extends TestCase {
 		assertNull(t.left.right);
 	}
 
+	@Test
 	public void testSpec1() {
 		Integer [] vals = {2,1,3};
 		TreeNode t = TreeNode.of(vals);
 		
 		ValidateBST valBST = new ValidateBST();
-		
-		assertEquals(true, valBST.isValidBST(t));
-		assertEquals(true, t.isValidBST);
+
+        assertTrue(valBST.isValidBST(t));
+        assertTrue(t.isValidBST);
 	}
-	
+
+	@Test
 	public void testSpec2() {
 		Integer [] vals = {5,1,4,null, null,3,6};
 		TreeNode t = TreeNode.of(vals);
 		
 		ValidateBST valBST = new ValidateBST();
-		
-		assertEquals(false, valBST.isValidBST(t));
-		assertEquals(false, t.isValidBST);
+
+        assertFalse(valBST.isValidBST(t));
+        assertFalse(t.isValidBST);
 	}
 }

@@ -1,23 +1,20 @@
 package numbers;
 
-import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import junit.framework.TestCase;
-
-
-public class LinkedNumbersTest extends TestCase {
+public class LinkedNumbersTest {
 	
 	private LinkedNumbers ln;
 	
-	
 
-	@Override
-	protected void setUp() throws Exception {
-		super.setUp();
+	@BeforeEach
+	void setUp() {
 		ln = new LinkedNumbers();
 	}
 

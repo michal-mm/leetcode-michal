@@ -1,13 +1,13 @@
 package strings;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MinRemoveParenthesesTest {
-
     @Test
     public void testSpec1() {
         String input = "lee(t(c)o)de)";

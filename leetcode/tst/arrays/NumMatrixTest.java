@@ -1,9 +1,13 @@
 package arrays;
 
-import junit.framework.TestCase;
 
-public class NumMatrixTest extends TestCase{
-	
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class NumMatrixTest {
+
+	@Test
 	public void testSpec1() {
 		int [][] matrix = { {3, 0, 1, 4, 2}, 
 							{5, 6, 3, 2, 1}, 
@@ -20,7 +24,8 @@ public class NumMatrixTest extends TestCase{
 		NumMatrix nm = new NumMatrix(matrix);
 		assertEquals(expected, nm.sumRegion(row1, col1, row2, col2));
 	}
-	
+
+	@Test
 	public void testSpec2() {
 		int [][] matrix = { {3, 0, 1, 4, 2}, 
 							{5, 6, 3, 2, 1}, 
@@ -37,7 +42,8 @@ public class NumMatrixTest extends TestCase{
 		NumMatrix nm = new NumMatrix(matrix);
 		assertEquals(expected, nm.sumRegion(row1, col1, row2, col2));
 	}
-	
+
+	@Test
 	public void testSpec3() {
 		int [][] matrix = { {3, 0, 1, 4, 2}, 
 							{5, 6, 3, 2, 1}, 

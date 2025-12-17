@@ -1,17 +1,19 @@
 package numbers;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MajorityElemsTest {
 
 	@Test
 	public void testSpec1() {
 		int[] nums = {3,2,3};
+
 		List<Integer> expected = List.of(3);
 		
 		MajorityElems me = new MajorityElems();

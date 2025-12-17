@@ -1,13 +1,15 @@
 package numbers;
 
-import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class SimilarItemsTest extends TestCase {
+public class SimilarItemsTest {
 
+	@Test
 	public void testSpec1 () {
 		int [][] items1 = {{1,1},{4,5},{3,8}};
 		int [][] items2 = {{3,1},{1,5}};

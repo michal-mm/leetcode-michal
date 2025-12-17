@@ -1,9 +1,13 @@
 package strings;
 
-import junit.framework.TestCase;
 
-public class WordSearchTest extends TestCase{
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class WordSearchTest {
+
+	@Test
 	public void testSpec1() {
 		WordSearch ws = new WordSearch();
 		WordSearch wsc = new WordSearchClaude();
@@ -14,7 +18,8 @@ public class WordSearchTest extends TestCase{
 		assertEquals(expected, ws.exist(board, word));
 		assertEquals(expected, wsc.exist(board, word));
  	}
-	
+
+	 @Test
 	public void testSpec2() {
 		WordSearch ws = new WordSearch();
 		WordSearch wsc = new WordSearchClaude();
@@ -25,7 +30,8 @@ public class WordSearchTest extends TestCase{
 		assertEquals(expected, ws.exist(board, word));
 		assertEquals(expected, wsc.exist(board, word));
  	}
-	
+
+	 @Test
 	public void testSpec3() {
 		WordSearch ws = new WordSearch();
 		WordSearch wsc = new WordSearchClaude();

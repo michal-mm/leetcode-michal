@@ -1,30 +1,36 @@
 package strings;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
-public class AliceBobGameTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.*;
 
+public class AliceBobGameTest {
+
+	@Test
 	public void testSpec1 () {
 		AliceBobGame game = new AliceBobGame();
 		String input = "5023";
-		assertEquals(false, game.sumGame(input));
+        assertFalse(game.sumGame(input));
 	}
-	
+
+	@Test
 	public void testSpec2 () {
 		AliceBobGame game = new AliceBobGame();
 		String input = "25??";
-		assertEquals(true, game.sumGame(input));
+        assertTrue(game.sumGame(input));
 	}
-	
+
+	@Test
 	public void testSpec3 () {
 		AliceBobGame game = new AliceBobGame();
 		String input = "?3295???";
-		assertEquals(false, game.sumGame(input));
+        assertFalse(game.sumGame(input));
 	}
-	
+
+	@Test
 	public void testSpec4 () {
 		AliceBobGame game = new AliceBobGame();
 		String input = "2?2?";
-		assertEquals(false, game.sumGame(input));
+        assertFalse(game.sumGame(input));
 	}
 }

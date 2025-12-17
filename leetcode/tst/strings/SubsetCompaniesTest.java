@@ -1,14 +1,12 @@
 package strings;
 
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import junit.framework.TestCase;
-
-public class SubsetCompaniesTest extends TestCase {
+public class SubsetCompaniesTest {
 
 	@Test
 	public void testSpec1() {

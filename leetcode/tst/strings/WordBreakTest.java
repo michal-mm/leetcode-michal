@@ -1,10 +1,13 @@
 package strings;
 
-import static org.junit.Assert.assertEquals;
+
+
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class WordBreakTest {
 
@@ -20,7 +23,7 @@ public class WordBreakTest {
 		
 		assertEquals(expected.size(), wbResult.size());
 		for(String sentence: expected) {
-			assertEquals(true, wbResult.contains(sentence));
+            assertTrue(wbResult.contains(sentence));
 		}
 	}
 	
@@ -37,7 +40,7 @@ public class WordBreakTest {
 		
 		assertEquals(expected.size(), wbResult.size());
 		for(String sentence: expected) {
-			assertEquals(true, wbResult.contains(sentence));
+            assertTrue(wbResult.contains(sentence));
 		}
 	}
 	
@@ -53,7 +56,7 @@ public class WordBreakTest {
 		
 		assertEquals(expected.size(), wbResult.size());
 		for(String sentence: expected) {
-			assertEquals(true, wbResult.contains(sentence));
+            assertTrue(wbResult.contains(sentence));
 		}
 	}
 }
