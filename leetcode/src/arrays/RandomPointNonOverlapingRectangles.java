@@ -20,7 +20,7 @@ public class RandomPointNonOverlapingRectangles {
                 .sum();
     }
 
-    public int[] pick() {
+    public Integer[] pick() {
         var rand = RandomGenerator.getDefault();
         var rInt = rand.nextLong(0, totalSize);
 
@@ -33,7 +33,7 @@ public class RandomPointNonOverlapingRectangles {
         }
 
         // this shouldn't happen
-        return new int[]{Integer.MIN_VALUE,Integer.MIN_VALUE};
+        return new Integer[]{Integer.MIN_VALUE,Integer.MIN_VALUE};
     }
 
     record Rectangle(int a, int b, int x, int y) {
@@ -46,7 +46,7 @@ public class RandomPointNonOverlapingRectangles {
             return number <= size();
         }
 
-        int[] getPointFromNumber(long number) {
+        Integer[] getPointFromNumber(long number) {
             if (!fits(number)) {
                 throw new IllegalArgumentException("Number is too high for one suqare! "
                         + number + ", square size=" + size());
@@ -55,7 +55,7 @@ public class RandomPointNonOverlapingRectangles {
             var px = a + number % (x-a+1);
             var py = b + number / (x-a+1);
 
-            return new int[]{(int)px, (int)py};
+            return new Integer[]{(int)px, (int)py};
         }
     }
 }
