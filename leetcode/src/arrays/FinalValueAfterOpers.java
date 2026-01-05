@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-
 public class FinalValueAfterOpers {
     public int finalValueAfterOperations(String[] operations) {
         // this one seems to be the fasetsts in leetcode tests

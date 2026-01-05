@@ -1,6 +1,7 @@
 package strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,11 +12,8 @@ public class WordsObtainedAfterAddingLetter {
         int result = 0;
         Map<Integer, List<String>> numOfLetters2Strings = new HashMap<>();
 
-        for (String startW : startWords) {
-            numOfLetters2Strings
-                    .computeIfAbsent(startW.length(), _ -> new ArrayList<>())
-                    .add(startW);
-        }
+        numOfLetters2Strings
+                .computeIfAbsent(startWords.length, _ -> new ArrayList<>()).addAll(Arrays.asList(startWords));
 
         for (String word: targetWords) {
             List<String> prefixes = numOfLetters2Strings.getOrDefault(word.length()-1, new ArrayList<>());
