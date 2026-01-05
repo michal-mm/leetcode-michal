@@ -426,3 +426,5 @@ lib/
 .idea/
 leetcode/.idea/
 /qodana.yaml
+*.class
+**/target/
